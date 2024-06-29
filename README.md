@@ -1,3 +1,7 @@
+# Fork
+
+This is a fork of the 1.2.0 firmware with configuration changes needed to use the BIQU HS V2S extruder instead of the original.
+
 # Introduction
 
 Sovol SV01 PRO is a budget printer with compact functions and the larger printing size than other 
