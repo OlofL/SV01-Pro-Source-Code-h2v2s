@@ -1182,11 +1182,15 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 38, 15, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -30, -30, 0 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
-#define PROBING_MARGIN 30
+#define PROBING_MARGIN 60
+#define PROBING_MARGIN_LEFT 70
+#define PROBING_MARGIN_RIGHT 0
+#define PROBING_MARGIN_FRONT 70
+#define PROBING_MARGIN_BACK 0
 
 // X and Y axis travel speed (mm/min) between probes
 #define XY_PROBE_FEEDRATE (133*60)
@@ -1334,7 +1338,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -1372,12 +1376,12 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 290
+#define X_BED_SIZE 280
 #define Y_BED_SIZE 240
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS -12
-#define Y_MIN_POS 0
+#define X_MIN_POS -8
+#define Y_MIN_POS -5
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
